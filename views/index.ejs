@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Streak Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1A374D;
+            color: white;
+            width: 100vw;
+        }
+
+        hr {
+            color: #B1D0E0;
+        }
+
+        .paras {
+            color: #B1D0E0;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .paras-1 {
+            margin-top: 10px;
+        }
+
+        .paras-2 {
+            margin-top: 30px;
+        }
+
+        .paras-3 {
+            margin-top: 30px;
+        }
+
+        .paras-4 {
+            margin-top: 30px;
+        }
+
+        .heading {
+            margin: auto;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            margin: auto;
+            font-size: 2.3rem;
+            font-weight: 500;
+            padding: 10px 20px;
+        }
+
+        .kutp {
+            margin: auto;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+        }
+
+        .btn-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 4px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            background-color: #DE834D;
+            margin: 20px auto;
+            cursor: pointer;
+            padding: auto;
+            animation: btnAnimate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes btnAnimate {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">Streak Tracker</div>
+    <hr>
+    <div class="username">Hey <%= username %>! </div>
+    <div class="kutp">Keep up the tempo!</div>
+    <div class="paras">
+        <div class="paras-1">You have been crushing it till this point achieving your daily goal.</div>
+        <div class="paras-2">Don't let your streak brak.</div>
+        <div class="paras-3">Go over and solve some problems!!</div>
+        <div class="paras-4">Go solve atleast one problem, You can do that !!</div>
+    </div>
+    <div class="btn-container">
+        <button class="btn">Keep the streak going!</button>
+    </div>
+    <a href="www.github.com">Github</a>
+    <hr>
+</body>
+
+</html>
