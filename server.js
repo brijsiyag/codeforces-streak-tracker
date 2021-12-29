@@ -2,18 +2,16 @@ const express = require("express");
 const app = express();
 const port = 8000;
 const mongoose = require("mongoose");
-const send = require("./send");
-const axios = require("axios");
-
-axios
-  .get(
-    "https://codeforces.com/api/user.status?handle=brijsiyag&from=1&count=10"
-  )
-  .then((res) => {
-    console.log(res.data);
-  });
-
+const nodeCron = require("node-cron");
+const HomeRoute = require("./Routes/User/Routes/home");
 require("dotenv").config();
+
+// MiddleWares
+
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
 mongoose.connect(
   process.env.DBURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -25,6 +23,12 @@ mongoose.connect(
     }
   }
 );
+
+//nodecrone setup
+
+app.get("/", HomeRoute);
+app.post("/", HomeRoute);
+
 app.listen(port, () => {
   console.log(`nodemailerProject is listening at http://localhost:${port}`);
 });

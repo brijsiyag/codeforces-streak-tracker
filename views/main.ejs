@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e5e5f7;
+            opacity: 1;
+            background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 8px), repeating-linear-gradient(#00bcff55, #00bcff);
+        }
+
+        .form-container {
+            border: gray 1px solid;
+            padding: 30px;
+            width: fit-content;
+            border-radius: 5px;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+
+        }
+
+        .heading {
+            margin: auto;
+            border-bottom: gray solid 1px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>CF Streak Tracker</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="heading">Cf Streak Tracker</h2>
+        <form action="/" method="post" class="form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Codeforces username</label>
+                <input type="text" class="form-control" name="username" id="username"
+                    placeholder="Enter codeforces username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

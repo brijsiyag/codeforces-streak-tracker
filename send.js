@@ -2,7 +2,8 @@ const nodemailer = require("nodemailer");
 const google = require("googleapis");
 const ejs = require("ejs");
 
-const send = (username) => {
+const send = (username, email) => {
+  console.log(username, email);
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -20,16 +21,15 @@ const send = (username) => {
     (err, data) => {
       let mailOptions = {
         from: "Don't let your streak bresk!! <prakashram9571@gmail.com>",
-        to: "20bcs059@iiitdmj.ac.in",
+        to: email,
         subject: "Hey Birju, Don't let your streak break!!",
         html: `${data}`,
       };
-
       transporter.sendMail(mailOptions, function (err, data) {
         if (err) {
           console.log("Error " + err);
         } else {
-          console.log("Email sent successfully");
+          console.log(data, "Email sent successfully");
         }
       });
     }
