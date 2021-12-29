@@ -22,7 +22,7 @@ const send = (username, email) => {
       let mailOptions = {
         from: "Don't let your streak bresk!! <prakashram9571@gmail.com>",
         to: email,
-        subject: "Hey Birju, Don't let your streak break!!",
+        subject: `Hey ${username}, Don't let your streak break!!`,
         html: `${data}`,
       };
       transporter.sendMail(mailOptions, function (err, data) {

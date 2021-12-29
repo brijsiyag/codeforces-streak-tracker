@@ -5,7 +5,8 @@ router.get("/*", (req, res) => {
   res.render("main");
 });
 router.post("/", (req, res) => {
-  User.find(
+  console.log(req.body);
+  User.findOne(
     { username: req.body.username, email: req.body.email },
     async (err, data) => {
       if (err || data) {
